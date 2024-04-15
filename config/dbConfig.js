@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+import mongoose, { connect, connection as _connection } from 'mongoose';
 
-mongoose.connect(process.env.mongo_url);
+connect(process.env.mongo_url);
 
-const connection = mongoose.connection;
+const connection = _connection;
 
 connection.on('error', () => {
     console.log('Error');
@@ -12,4 +12,4 @@ connection.on('connected', () => {
     console.log('Connected');
 })
 
-module.exports = mongoose;
+export default mongoose;
