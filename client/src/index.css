@@ -81,3 +81,7 @@
  .gradient-button {
      background: linear-gradient(to right, #212a3c, #2d3250, rgba(78, 81, 95, 0.777), #ffb17aa3);
  }
+
+ .highlight-word {
+     color: #ffb17a;
+ }

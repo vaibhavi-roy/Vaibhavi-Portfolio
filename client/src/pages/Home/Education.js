@@ -1,41 +1,41 @@
-import React from 'react'
-import SectionTitle from '../../components/SectionTitle'
-// import { education } from '../../resources/education';
+import React, { useState } from 'react';
+import SectionTitle from '../../components/SectionTitle';
 import { useSelector } from 'react-redux';
 
-
 function Education() {
-    const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
+    const [selectedItemIndex, setSelectedItemIndex] = useState(0);
     const { portfolioData } = useSelector((state) => state.root);
     const { education } = portfolioData;
+
     return (
         <div>
             <SectionTitle title="Education" />
-            <div className='flex py-10 gap-20 sm:flex-col'>
-                <div className='flex flex-col gap-10 border-l-2 border-[#2d3250] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full'>
-                    {education.map((education, index) => (
-                        <div onClick={() => {
-                            setSelectedItemIndex(index);
+            <div className="flex flex-wrap gap-8 justify-center">
+                {education.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`flex-shrink-0 p-6 border border-gray-200 rounded-md cursor-pointer relative ${selectedItemIndex === index ? 'border-tertiary' : ''}`}
+                        style={{
+                            width: '90%',
+                            maxWidth: '300px',
+                            minWidth: '250px',
+                            height: '200px',
+                            background: 'linear-gradient(135deg, #212a3c 0%, #676fgd 25%, #ffb17a 50%, #2d3250 75%, #fff 100%)'
                         }}
-                            className='cursor-pointer'
-                        >
-                            <h1 className={`text-xl font-semibold ${selectedItemIndex === index ? 'text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#2d32504d] py-3 sm:w-full' : 'text-white'}`}>{education.period}</h1>
-                        </div>
-                    ))}
-                </div>
-                <div className='flex flex-col gap-5'>
-                    <h1 className='text-secondary font-bold text-xl'>{education[selectedItemIndex].institute}</h1>
-                    <h1 className='text-tertiary text-xl '>{education[selectedItemIndex].title}</h1>
-                    <p className='text-white'>{education[selectedItemIndex].
-                        period}</p>
-                    <h1 className='text-white '>{education[selectedItemIndex].score}</h1>
-
-
-
-                </div>
+                        onClick={() => setSelectedItemIndex(index)}
+                    >
+                        <h2 className="text-lg font-semibold text-tertiary">{item.institute}</h2>
+                        <p className="text-sm text-white">{item.title}</p>
+                        <p className="text-sm text-gray-400">{item.period}</p>
+                        <p className="text-sm text-white">{item.score}</p>
+                        <div
+                            className="absolute inset-0 rounded-md opacity-0 transition-opacity duration-300 bg-gradient-to-b from-transparent to-black hover:opacity-50"
+                        />
+                    </div>
+                ))}
             </div>
         </div>
-    )
+    );
 }
 
-export default Education
+export default Education;

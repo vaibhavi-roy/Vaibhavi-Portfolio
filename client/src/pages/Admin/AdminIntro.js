@@ -45,6 +45,9 @@ function AdminIntro() {
             <Form.Item name='description' label='Description'>
                 <textarea placeholder='Description' />
             </Form.Item>
+            <Form.Item name='CV' label='CV'>
+                <input placeholder='CV' />
+            </Form.Item>
             <div className='flex justify-start w-full'>
                 <button className='px-10 py-2 bg-primary text-white' type='submit'>SAVE</button>
             </div>
