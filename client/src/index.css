@@ -12,12 +12,12 @@
 
  /* Track */
  ::-webkit-scrollbar-track {
-     background-color: #81c3d7;
+     background-color: #212a3c;
  }
 
  /* Handle */
  ::-webkit-scrollbar-thumb {
-     background: #81c3d79a;
+     background: #212a3c8b;
      border-radius: 10px;
  }
 
@@ -76,4 +76,8 @@
  textarea {
      height: 100px;
      padding-top: 10px;
+ }
+
+ .gradient-button {
+     background: linear-gradient(to right, #212a3c, #2d3250, rgba(78, 81, 95, 0.777), #ffb17aa3);
  }

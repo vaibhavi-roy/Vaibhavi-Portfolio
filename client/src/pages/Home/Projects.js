@@ -11,14 +11,14 @@ function Projects() {
         <div>
             <SectionTitle title="Projects" />
             <div className='flex py-10 gap-20 flex-col'>
-                <div className='flex  gap-10 border-l-2 border-[#2f6690]  flex-row overflow-x-scroll w-full'>
+                <div className='flex  gap-10 border-l-2 border-[#2d3250]  flex-row overflow-x-scroll w-full'>
                     {projects.map((project, index) => (
                         <div onClick={() => {
                             setSelectedItemIndex(index);
                         }}
                             className='cursor-pointer'
                         >
-                            <h1 className={`text-xl font-semibold ${selectedItemIndex === index ? 'text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#2f66903f] py-3 sm:w-full' : 'text-white'}`}>{project.title}</h1>
+                            <h1 className={`text-xl font-semibold ${selectedItemIndex === index ? 'text-tertiary border-tertiary border-l-4 -ml-[2px] bg-[#2d32504d] py-3 sm:w-full' : 'text-white'}`}>{project.title}</h1>
                         </div>
                     ))}
                 </div>
