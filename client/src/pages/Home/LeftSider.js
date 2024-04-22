@@ -12,7 +12,7 @@ function LeftSider() {
                     <a href='https://twitter.com/VaibhaviRoy1'><i class="ri-twitter-x-line text-3xl"></i></a>
                     <a href='https://github.com/vaibhavi-roy'><i class="ri-github-line text-3xl"></i></a>
                 </div>
-                <div className='w-[1px] h-32 bg-tertiary '></div>
+                <div className='w-[1px] h-32 bg-tertiary sm:bg-primary'></div>
             </div>
         </div>
     );

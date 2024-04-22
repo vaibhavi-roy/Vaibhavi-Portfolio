@@ -10,7 +10,7 @@ function Experiences() {
     return (
         <div>
             <SectionTitle title="Experiences" />
-            <div className="flex flex-row gap-10 sm:flex-row sm:overflow-x-scroll sm:w-full">
+            <div className="flex w-[90%] ml-16 sm:ml-5 flex-row gap-10 sm:flex-row sm:overflow-x-scroll sm:w-[90%]">
                 {experiences.map((experience, index) => (
                     <div
                         key={index}
@@ -25,7 +25,7 @@ function Experiences() {
                     </div>
                 ))}
             </div>
-            <div className="mt-8">
+            <div className="mt-8 flex w-[90%] ml-16 sm:ml-5 sm:w-[90%]">
                 <div className="p-8 rounded-lg bg-gradient-to-b from-[#212a3c] to-[#1d1f38] border border-tertiary">
                     <h1 className="text-2xl font-semibold text-tertiary">{experiences[selectedItemIndex].title}</h1>
                     <h1 className="text-lg font-semibold text-tertiary">{experiences[selectedItemIndex].company}</h1>

@@ -10,7 +10,7 @@ function Education() {
     return (
         <div>
             <SectionTitle title="Education" />
-            <div className="flex flex-wrap gap-8 justify-center">
+            <div className="flex w-[90%] ml-16 sm:ml-1 sm:w-full  flex-wrap gap-8 justify-center">
                 {education.map((item, index) => (
                     <div
                         key={index}

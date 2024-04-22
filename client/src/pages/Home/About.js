@@ -12,12 +12,12 @@ function About() {
     return (
         <div>
             <SectionTitle title="About Me" />
-            <div className='flex w-full items-center sm:flex-col'>
+            <div className='flex w-[90%] ml-16 sm:ml-1 sm:w-full items-center sm:flex-col'>
                 <div className='h-[60vh] flex flex-col items-start justify-center gap-8 w-1/2 sm:w-3/4 sm:h-3/4 sm:mb-12'>
                     <img
                         src={DevGirl}
                         alt="dev girl"
-                        className="rounded-2xl mx-auto md:w-md"
+                        className="rounded-2xl mx-auto sm:w-3/4 sm:h-3/4"
                     />
                 </div>
                 <div className='h-[60vh] flex flex-col items-start justify-center gap-8 w-1/2 sm:w-4/5 sm:h-3/4'>
@@ -38,8 +38,8 @@ function About() {
                 </div>
             </div>
             <div className='py-5'>
-                <h1 className='text-tertiary text-2xl font-semibold'>Here are a few technologies I have been working on:</h1>
-                <div className='flex flex-wrap gap-10 mt-5 '>
+                <h1 className='flex w-[90%] ml-16 sm:ml-2 sm:w-full text-tertiary text-2xl font-semibold'>Here are a few technologies I have been working on:</h1>
+                <div className='flex flex-wrap gap-10 mt-5 w-[90%] ml-16 sm:ml-2 sm:w-full'>
                     {skills.map((skill, index) => (
                         <div className={`gradient-button cursor-pointer p-3 rounded-md transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg  'bg-gradient-to-br from-[#2d3250] to-[#1d1f38] text-tertiary : 'bg-gradient-to-br from-[#212a3c] to-[#424769] text-white'`}>
                             <h1 className='text-tertiary font-semibold'>{skill}</h1>

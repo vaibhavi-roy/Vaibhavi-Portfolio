@@ -10,7 +10,7 @@ function Projects() {
     return (
         <div>
             <SectionTitle title="Projects" />
-            <div className="flex py-10 gap-20 flex-col">
+            <div className="flex w-[90%] ml-16 sm:ml-2 sm:w-[95%]  py-10 gap-20 flex-col">
                 <div className="flex gap-10 flex-row overflow-x-scroll w-full">
                     {projects.map((project, index) => (
                         <div

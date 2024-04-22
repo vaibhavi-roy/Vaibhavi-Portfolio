@@ -10,10 +10,10 @@ function Contact() {
     return (
         <div>
             <SectionTitle title="Contact Me" />
-            <div className='flex w-full items-center sm:flex-col'>
+            <div className='flex w-[90%] ml-16 sm:ml-2 sm:w-[95%]  items-center sm:flex-col'>
                 <div className='flex w-full items-center sm:flex-col'>
                     <div className="flex flex-col gap-1">
-                        <p className="text-tertiary text-2xl font-semibold sm:font-light sm:text-xl">{"{"}</p>
+                        <p className="text-tertiary text-xl font-semibold sm:font-light sm:text-l">{"{"}</p>
                         {Object.keys(contact).map((key) => key !== "_id" && (
                             <p className="ml-5">
                                 <span className="text-tertiary text-2xl font-semibold sm:font-light sm:text-xl"> {key} : </span>
