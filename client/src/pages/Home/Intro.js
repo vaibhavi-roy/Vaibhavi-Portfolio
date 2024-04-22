@@ -32,7 +32,7 @@ function Intro() {
                     </button>
                 </a>
             </div>
-            <div className='h-[60vh] flex flex-col items-start justify-center  w-1/2 sm:w-3/4'>
+            <div className='h-[60vh] flex flex-col items-start justify-center  w-1/2 sm:w-4/5'>
                 <img
                     src={MainImage}
                     alt="my profile"
